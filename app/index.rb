@@ -20,16 +20,10 @@ end
 
 def on_deviceready event
   puts 'cordova:deviceready'
-  indicate_deviceready
   bind_cordova_events
   start_phaser_demo
 end
 
-def indicate_deviceready
-  dr_element = $document['deviceready']
-  dr_element.at_css('.listening')['style'] = 'display:none;'
-  dr_element.at_css('.received' )['style'] = 'display:block;'
-end
 
 def bind_cordova_events
   # https://cordova.apache.org/docs/en/latest/cordova/events/events.html

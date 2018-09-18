@@ -13,14 +13,18 @@ function preload ()
 
 function create ()
 {
-  this.add.image(400, 300, 'sky');
+  this.add.image(window.innerWidth * window.devicePixelRatio / 2,
+                 window.innerHeight * window.devicePixelRatio / 2,
+                 'sky');
   var particles = this.add.particles('red');
   var emitter = particles.createEmitter({
     speed: 100,
     scale: { start: 1, end: 0 },
     blendMode: 'ADD'
   });
-  var logo = this.physics.add.image(400, 100, 'logo');
+  var logo = this.physics.add.image(window.innerWidth * window.devicePixelRatio / 2,
+                                    window.innerHeight * window.devicePixelRatio / 4,
+                                    'logo');
   logo.setVelocity(100, 200);
   logo.setBounce(1, 1);
   logo.setCollideWorldBounds(true);
@@ -30,8 +34,8 @@ function create ()
 function config() {
   var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: window.innerWidth * window.devicePixelRatio,
+    height: window.innerHeight * window.devicePixelRatio,
     physics: {
       default: 'arcade',
                arcade: {
