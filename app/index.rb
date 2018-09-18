@@ -1,7 +1,9 @@
 require 'opal' 
+require 'opal/version'
 require 'browser'
 require 'native'
-require 'repl'
+require 'phaser_demo'
+# require 'repl'
 
 puts "Opal #{Opal::VERSION}"
 
@@ -20,6 +22,7 @@ def on_deviceready event
   puts 'cordova:deviceready'
   indicate_deviceready
   bind_cordova_events
+  start_phaser_demo
 end
 
 def indicate_deviceready
