@@ -2,6 +2,7 @@ require 'opal'
 require 'opal/version'
 require 'browser'
 require 'native'
+require 'phaser'
 require 'phaser_demo'
 # require 'repl'
 
@@ -9,9 +10,8 @@ puts "Opal #{Opal::VERSION}"
 
 $document.ready do
   puts "ready"
-  $document.on( :click       ) { |event| on_event event       }
+  # $document.on( :click       ) { |event| on_event event       }
   $document.on( :deviceready ) { |event| on_deviceready event }
-  # REPL.run
 end
 
 def on_event event
@@ -21,9 +21,9 @@ end
 def on_deviceready event
   puts 'cordova:deviceready'
   bind_cordova_events
-  start_phaser_demo
+  game = phaser_demo
+  # REPL.run game
 end
-
 
 def bind_cordova_events
   # https://cordova.apache.org/docs/en/latest/cordova/events/events.html
