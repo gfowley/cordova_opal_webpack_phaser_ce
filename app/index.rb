@@ -2,8 +2,7 @@ require 'opal'
 require 'opal/version'
 require 'browser'
 require 'native'
-require 'phaser'
-require 'phaser_demo'
+require 'demo_phaser'
 # require 'repl'
 
 puts "Opal #{Opal::VERSION}"
@@ -21,8 +20,8 @@ end
 def on_deviceready event
   puts 'cordova:deviceready'
   bind_cordova_events
-  game = phaser_demo
-  # REPL.run game
+  game = demo_phaser_ce
+  # REPL.run
 end
 
 def bind_cordova_events
