@@ -14,21 +14,18 @@ class Image
   def create
     @image = @game.add.sprite(@game.world.x_center, @game.world.y_center, @sprite_key)
     @image.anchor.set(0.5)
+  end
+
+  def on_click_play sound
     @image.input_enabled = true
-    
-    @text = @game.add.text(@game.world.x_center, 16, '', { fill: '#ffffff' })
-    @counter = 0
     listener = proc do
-      @counter   += 1
-      @text.text = "You clicked #{@counter} times!"
+      sound.play
     end
-    
     @image.events.on(:down, self, &listener)
   end
 end
 
 class BackGround
-
   def initialize game
     @game = game
   end
@@ -42,7 +39,24 @@ class BackGround
     bg.width  = $window.view.width
     bg.height = $window.view.height
   end
+end
 
+class Blaster
+  def initialize game
+    @game = game
+  end
+
+  def preload
+    @game.load.audio('blaster','audio/blaster.mp3')
+  end
+
+  def create
+    @sound = @game.add.audio('blaster')
+  end
+
+  def play
+    @sound.play
+  end
 end
 
 class Game
@@ -66,11 +80,15 @@ class MainState < Phaser::State
     @background.preload
     @image = Image.new(@game)
     @image.preload
+    @blaster = Blaster.new(@game)
+    @blaster.preload
   end
   
   def create
     @background.create
     @image.create
+    @blaster.create
+    @image.on_click_play @blaster
   end
 end
 
