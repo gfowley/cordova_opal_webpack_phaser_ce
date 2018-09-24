@@ -35,9 +35,10 @@ class BackGround
   end
 
   def create
-    bg = @game.add.image(0,0,'background')
-    bg.width  = $window.view.width
-    bg.height = $window.view.height
+    @game.scale.scale_mode = Phaser::ScaleManager::SHOW_ALL
+    # @game.scale.page_align_horizontally = true
+    # @game.scale.page_align_vertically = true
+    @game.add.tile_sprite(0,0,@game.width,@game.height,'background')
   end
 end
 
@@ -56,17 +57,6 @@ class Blaster
 
   def play
     @sound.play
-  end
-end
-
-class Game
-  def initialize
-    game  = Phaser::Game.new(
-      width: $window.view.width,
-      height: $window.view.height
-    )
-    state = MainState.new game
-    game.state.add :main, state, true
   end
 end
 
@@ -93,6 +83,13 @@ class MainState < Phaser::State
 end
 
 def demo_phaser_ce
-  Game.new
+  # $window.screen.orientation.lock 'portrait'
+  $game  = Phaser::Game.new(
+    width: $window.view.width,
+    height: $window.view.height
+  )
+  state = MainState.new $game
+  $game.state.add :main, state, true
+  $game
 end
 
