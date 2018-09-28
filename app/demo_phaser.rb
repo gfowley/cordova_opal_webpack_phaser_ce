@@ -36,8 +36,6 @@ class BackGround
 
   def create
     @game.scale.scale_mode = Phaser::ScaleManager::SHOW_ALL
-    # @game.scale.page_align_horizontally = true
-    # @game.scale.page_align_vertically = true
     @game.add.tile_sprite(0,0,@game.width,@game.height,'background')
   end
 end
@@ -83,7 +81,6 @@ class MainState < Phaser::State
 end
 
 def demo_phaser_ce
-  # $window.screen.orientation.lock 'portrait'
   $game  = Phaser::Game.new(
     width: $window.view.width,
     height: $window.view.height
