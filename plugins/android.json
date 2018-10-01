@@ -8,8 +8,12 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+      "PACKAGE_NAME": "net.iqeo.CordovaOpalWebpackPhaserCETemplate"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "net.iqeo.CordovaOpalWebpackPhaserCETemplate"
+    }
+  }
 }

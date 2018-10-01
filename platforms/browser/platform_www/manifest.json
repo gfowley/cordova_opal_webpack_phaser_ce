@@ -1,6 +1,6 @@
 {
-  "name": "HelloCordova",
-  "short_name": "HelloCordova",
+  "name": "Cordova Opal Webpack Phaser CE Template",
+  "short_name": "Cordova Opal Webpack Phaser CE Template",
   "description": "Description of your app from template",
   "start_url": "index.html",
   "scope": "index.html",
