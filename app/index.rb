@@ -1,15 +1,17 @@
 require 'opal' 
-require 'browser'
+require 'opal/version'
 require 'native'
-require 'repl'
+require 'browser'
+require 'browser/screen'
+require 'demo_phaser'
+# require 'repl'
 
 puts "Opal #{Opal::VERSION}"
 
 $document.ready do
   puts "ready"
-  $document.on( :click       ) { |event| on_event event       }
+  # $document.on( :click       ) { |event| on_event event       }
   $document.on( :deviceready ) { |event| on_deviceready event }
-  # REPL.run
 end
 
 def on_event event
@@ -18,14 +20,9 @@ end
 
 def on_deviceready event
   puts 'cordova:deviceready'
-  indicate_deviceready
   bind_cordova_events
-end
-
-def indicate_deviceready
-  dr_element = $document['deviceready']
-  dr_element.at_css('.listening')['style'] = 'display:none;'
-  dr_element.at_css('.received' )['style'] = 'display:block;'
+  demo_phaser_ce
+  # REPL.run
 end
 
 def bind_cordova_events

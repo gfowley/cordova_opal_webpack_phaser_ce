@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="net.iqeo.CordovaOpalWebpackTemplate" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Cordova/Opal/Webpack Template</name>
-    <description>Cordova/Opal/Webpack Template</description>
+<widget id="net.iqeo.cordova-opal-webpack-phaser-ce-template" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Cordova Opal Webpack Phaser CE Template</name>
+    <description>Cordova Opal Webpack Phaser CE Template</description>
     <author email="dev@iqeo.net" href="http://iqeo.net">Iqeo</author>
     <content src="index.html" />
     <access origin="*" />
@@ -11,6 +11,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>

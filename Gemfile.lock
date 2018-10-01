@@ -1,3 +1,18 @@
+GIT
+  remote: https://github.com/gfowley/opal-phaser
+  revision: 18c516015ccfeb2ac8fd18866f57830e308ccab3
+  specs:
+    opal-phaser (0.4.6)
+      opal (~> 0.11)
+      opal-pixi
+
+GIT
+  remote: https://github.com/gfowley/opal-pixi
+  revision: 3e885c611175cb88150c89da8eda5a984b2b9292
+  specs:
+    opal-pixi (0.3.6)
+      opal (~> 0.11)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -23,6 +38,8 @@ PLATFORMS
 DEPENDENCIES
   opal (= 0.11.0)
   opal-browser
+  opal-phaser!
+  opal-pixi!
   rake
 
 BUNDLED WITH
