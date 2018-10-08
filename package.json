@@ -1,8 +1,8 @@
 {
-    "name": "cordova-opal-webpack-template",
-    "displayName": "Cordova/Opal/Webpack Template",
+    "name": "cordova-opal-webpack-phaser-ce-template",
+    "displayName": "Cordova/Opal/Webpack/Phaser-CE Template",
     "version": "1.0.0",
-    "description": "Cordova/Opal/Webpack Template",
+    "description": "Cordova/Opal/Webpack/Phaser-CE Template",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

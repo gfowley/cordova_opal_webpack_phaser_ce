@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="net.iqeo.CordovaOpalWebpackPhaserCETemplate" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Cordova Opal Webpack Phaser CE Template</name>
-    <description>Cordova Opal Webpack Phaser CE Template</description>
+    <name>Cordova Opal Webpack Phaser-CE Template</name>
+    <description>Cordova Opal Webpack Phaser-CE Template</description>
     <author email="dev@iqeo.net" href="http://iqeo.net">Iqeo</author>
     <content src="index.html" />
     <access origin="*" />
